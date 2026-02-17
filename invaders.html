@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Invaders Clan</title>
+<style>
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #111);
+    color: white;
+    overflow-x: hidden;
+}
+:root { --gold: #d4af37; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('https://i.imgur.com/4NJlX4h.jpeg') center/cover no-repeat fixed;
+    position: relative;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backdrop-filter: blur(4px);
+    background: rgba(0,0,0,0.55);
+}
+.hero * { position: relative; z-index: 2; }
+.hero h1 {
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--gold);
+}
+.hero p { font-size: 20px; opacity: .9; }
+
+/* NAV */
+nav {
+    position: fixed;
+    top: 0; width: 100%;
+    padding: 15px 40px;
+    background: rgba(20,20,20,0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+}
+nav a {
+    color: var(--gold);
+    margin-left: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+nav a:hover { color: white; }
+
+/* SECTIONS */
+.section {
+    padding: 80px 8%;
+}
+.glass {
+    background: rgba(255,255,255,0.06);
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    margin-bottom: 40px;
+}
+h2 {
+    color: var(--gold);
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+/* TEAM GRID */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+}
+.member {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+.member h3 { color: var(--gold); }
+
+/* BUTTON */
+.btn {
+    padding: 15px 30px;
+    border-radius: 10px;
+    background: var(--gold);
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: white;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    opacity: 0.7;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2 style="color:var(--gold); margin:0;">INVADERS</h2>
+    <div>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#join">Join</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>INVADERS</h1>
+    <p>Invade The Impossible</p>
+</section>
+
+<section class="section" id="about">
+    <div class="glass">
+        <h2>About Us</h2>
+        <p>
+            Invaders is a dominant clan forged from excellence, rising from Fusion Network 
+            and conquering every arena with precision and discipline. Built on loyalty, skill, 
+            and unbreakable brotherhood — Invaders stands unmatched.
+        </p>
+    </div>
+</section>
+
+<section class="section" id="team">
+    <div class="glass">
+        <h2>Founders</h2>
+        <div class="team-grid">
+            <div class="member"><h3>ZootronMc</h3></div>
+            <div class="member"><h3>Dannyboi</h3></div>
+            <div class="member"><h3>Abhi</h3></div>
+        </div>
+    </div>
+    <div class="glass">
+        <h2>Leaders</h2>
+        <div class="team-grid">
+            <div class="member"><h3>Soggy</h3></div>
+            <div class="member"><h3>Spongination</h3></div>
+            <div class="member"><h3>Wasi</h3></div>
+        </div>
+    </div>
+    <div class="glass">
+        <h2>War Leaders</h2>
+        <div class="team-grid">
+            <div class="member"><h3>Solvera</h3></div>
+            <div class="member"><h3>Fotitude (Retired)</h3></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="join">
+    <div class="glass" style="text-align:center;">
+        <h2>Join the Battle</h2>
+        <p>Meet LT4+ Requirements and step into the battleground.</p>
+        <a class="btn" href="https://discord.gg/H4TVb42hVB">Join Invaders Discord</a>
+    </div>
+</section>
+
+<footer>
+    © 2026 Invaders Clan — All Rights Reserved
+</footer>
+
+</body>
+</html>
